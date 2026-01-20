@@ -558,6 +558,36 @@ def make_gif_bytes(r_cent, times, snaps, params, title_mode):
     all_levels = np.arange(Tmin_plot, Tmax_plot + contour_step, contour_step)
     cs = None
 
+    def _remove_contours(cs_local):
+        """Matplotlib-version-safe contour removal."""
+        if cs_local is None:
+            return
+        # Older Matplotlib: QuadContourSet.collections
+        if hasattr(cs_local, "collections"):
+            for c in cs_local.collections:
+                try:
+                    c.remove()
+                except Exception:
+                    pass
+            return
+        # Newer Matplotlib (some builds): QuadContourSet.artists
+        if hasattr(cs_local, "artists"):
+            for a in cs_local.artists:
+                try:
+                    a.remove()
+                except Exception:
+                    pass
+            return
+        # Fallback: try to remove any children that look like contours
+        try:
+            for ch in list(ax.collections):
+                try:
+                    ch.remove()
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
     def update(k):
         nonlocal cs
         Tprof = snaps[k]
@@ -565,8 +595,7 @@ def make_gif_bytes(r_cent, times, snaps, params, title_mode):
         im.set_data(field)
 
         if cs is not None:
-            for c in cs.collections:
-                c.remove()
+            _remove_contours(cs)
             cs = None
 
         if k != 0:
