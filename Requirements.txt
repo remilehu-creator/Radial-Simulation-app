@@ -1,0 +1,6 @@
+streamlit>=1.30
+numpy>=1.23
+scipy>=1.10
+matplotlib>=3.7
+pandas>=1.5
+pillow>=9.5
