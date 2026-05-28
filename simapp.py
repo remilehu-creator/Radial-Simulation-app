@@ -57,7 +57,7 @@ I18N = {
         "display": "Affichage",
         "gif_opts": "Options GIF",
         "ui_hint": "Régle les paramètres à gauche puis clique **Lancer**.",
-        "interp_": "Comment lire les 4 graphiques",
+        "interp_title": "Comment lire les 4 graphiques",
         "interp_bullets": [
             "**Température moyenne** : indique si le réservoir se réchauffe globalement (énergie stockée) ou si le chauffage reste local. Un plateau suggère que pertes/limites hydrauliques dominent.",
             "**PV injecté (Qt/Vp)** : mesure à quel point le débit “remplit” le volume poreux. PV=1 signifie que tu as injecté l’équivalent du volume poreux total (agressif si atteint vite).",
