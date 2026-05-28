@@ -679,7 +679,7 @@ def fmt_2dec_or_sci(x):
 # ============================================================
 st.set_page_config(
     page_title="Simulateur Darcy Radial", layout="wide",
-    page_icon="assets/logo.png",
+    page_icon="logo.png",
     layout="wide"
 )
 
