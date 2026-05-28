@@ -42,7 +42,7 @@ I18N = {
         "generate_gif": "Générer le GIF",
         "download_gif": "Télécharger le GIF",
         "summary": "Résumé",
-        "summary_table_title": "Résumé de la simulation (tableau)",
+        "summary_table_": "Résumé de la simulation (tableau)",
         "diag": "Diagnostics",
         "plot_Tmean": "Température moyenne (°C)",
         "plot_PV": "PV injecté (Qt / Vp)",
@@ -57,14 +57,14 @@ I18N = {
         "display": "Affichage",
         "gif_opts": "Options GIF",
         "ui_hint": "Régle les paramètres à gauche puis clique **Lancer**.",
-        "interp_title": "Comment lire les 4 graphiques",
+        "interp_": "Comment lire les 4 graphiques",
         "interp_bullets": [
             "**Température moyenne** : indique si le réservoir se réchauffe globalement (énergie stockée) ou si le chauffage reste local. Un plateau suggère que pertes/limites hydrauliques dominent.",
             "**PV injecté (Qt/Vp)** : mesure à quel point le débit “remplit” le volume poreux. PV=1 signifie que tu as injecté l’équivalent du volume poreux total (agressif si atteint vite).",
             "**Rayon de plume** : distance atteinte par un seuil de réchauffement (ΔT≥0.5°C et ΔT≥1°C). Si ça plafonne, chauffer plus loin devient physiquement limité.",
             "**Profils ΔT(r)** : montre directement la forme du gradient thermique à des instants donnés. Courbe raide = advection dominante; courbe étalée = diffusion/pertes dominantes.",
         ],
-        "params_title": "À quoi servent les paramètres ?",
+        "params_": "À quoi servent les paramètres ?",
         "params_intro": "Cet onglet décrit les réglages disponibles dans la barre latérale (sans math).",
         "params_sections": {
             "Hydraulique": [
@@ -117,7 +117,7 @@ I18N = {
 
     "en": {
         "lang_name": "English",
-        "title": "Thermo-hydraulic simulator - Radial Darcy  © Rémi Lehu - GER SA",
+        "": "Thermo-hydraulic simulator - Radial Darcy  © Rémi Lehu - GER SA",
         "tab_sim": "Simulation",
         "tab_interp": "Interpretation",
         "tab_params": "Parameter guide",
@@ -133,7 +133,7 @@ I18N = {
         "generate_gif": "Generate GIF",
         "download_gif": "Download GIF",
         "summary": "Summary",
-        "summary_table_title": "Simulation summary (table)",
+        "summary_table_": "Simulation summary (table)",
         "diag": "Diagnostics",
         "plot_Tmean": "Mean temperature (°C)",
         "plot_PV": "Injected PV (Qt / Vp)",
@@ -148,14 +148,14 @@ I18N = {
         "display": "Display",
         "gif_opts": "GIF options",
         "ui_hint": "Set parameters on the left then click **Run**.",
-        "interp_title": "How to read the 4 plots",
+        "interp_": "How to read the 4 plots",
         "interp_bullets": [
             "**Mean temperature**: shows whether the reservoir heats globally (stored energy) or only locally. A plateau suggests losses/hydraulic limits dominate.",
             "**Injected PV (Qt/Vp)**: indicates how fast you “fill” the pore volume. PV=1 means injected volume equals total pore volume (aggressive if early).",
             "**Plume radius**: distance reached by warming thresholds (ΔT≥0.5°C and ΔT≥1°C). Saturation indicates physical limits.",
             "**ΔT(r) profiles**: direct thermal gradients at selected times. Steep front = advection-dominated; smeared front = diffusion/loss-dominated.",
         ],
-        "params_title": "What do the parameters mean?",
+        "params_": "What do the parameters mean?",
         "params_intro": "This tab explains the sidebar settings (no math).",
         "params_sections": {
             "Hydraulics": [
@@ -208,7 +208,7 @@ I18N = {
 
     "it": {
         "lang_name": "Italiano",
-        "title": "Simulatore termo-idraulico - Darcy Radiale  © Rémi Lehu - GER SA",
+        "": "Simulatore termo-idraulico - Darcy Radiale  © Rémi Lehu - GER SA",
         "tab_sim": "Simulazione",
         "tab_interp": "Interpretazione",
         "tab_params": "Guida parametri",
@@ -224,7 +224,7 @@ I18N = {
         "generate_gif": "Genera GIF",
         "download_gif": "Scarica GIF",
         "summary": "Riepilogo",
-        "summary_table_title": "Riepilogo simulazione (tabella)",
+        "summary_table_": "Riepilogo simulazione (tabella)",
         "diag": "Diagnostica",
         "plot_Tmean": "Temperatura media (°C)",
         "plot_PV": "PV iniettato (Qt / Vp)",
@@ -239,14 +239,14 @@ I18N = {
         "display": "Display",
         "gif_opts": "Opzioni GIF",
         "ui_hint": "Imposta i parametri a sinistra poi clicca **Avvia**.",
-        "interp_title": "Come leggere i 4 grafici",
+        "interp_": "Come leggere i 4 grafici",
         "interp_bullets": [
             "**Temperatura media**: indica se il serbatoio si riscalda globalmente o solo localmente. Un plateau suggerisce perdite/limiti idraulici.",
             "**PV iniettato (Qt/Vp)**: mostra quanto rapidamente “riempi” il volume dei pori. PV=1 = volume iniettato pari al volume dei pori (aggressivo se rapido).",
             "**Raggio plume**: distanza raggiunta da soglie (ΔT≥0.5°C e ΔT≥1°C). Saturazione = limite fisico.",
             "**Profili ΔT(r)**: gradienti termici diretti a tempi selezionati. Fronte ripido = advezione; fronte diffuso = diffusione/perdite.",
         ],
-        "params_title": "A cosa servono i parametri?",
+        "params_": "A cosa servono i parametri?",
         "params_intro": "Questa scheda spiega le impostazioni della barra laterale (senza formule).",
         "params_sections": {
             "Idraulica": [
@@ -514,7 +514,7 @@ def run_sim(params):
 # ============================================================
 # GIF maker (uses temporary file, Windows-safe)
 # ============================================================
-def make_gif_bytes(r_cent, times, snaps, params, title_mode):
+def make_gif_bytes(r_cent, times, snaps, params, _mode):
     max_frames = params["max_frames"]
     if len(times) > max_frames:
         idx = np.linspace(0, len(times) - 1, max_frames).astype(int)
@@ -694,6 +694,9 @@ lang_key = st.sidebar.selectbox(
 T = I18N[lang_key]
 
 st.title(T["title"])
+st.markdown(
+    "<p style='font-size:16px; color:gray; font-style:italic;'>© Rémi Lehu - GER SA</p>",
+    unsafe_allow_html=True
 tab_sim, tab_interp, tab_params = st.tabs([T["tab_sim"], T["tab_interp"], T["tab_params"]])
 
 palettes = ["turbo", "inferno", "plasma", "viridis", "magma",
