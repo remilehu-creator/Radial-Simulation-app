@@ -26,7 +26,7 @@ SECONDS_PER_YEAR = 365.25 * SECONDS_PER_DAY
 I18N = {
     "fr": {
         "lang_name": "Français",
-        "title": "Simulateur thermo hydraulique - Darcy Radial  © Rémi Lehu - GER SA" ",
+        "title": "Simulateur thermo hydraulique - Darcy Radial  © Rémi Lehu - GER SA ",
         "tab_sim": "Simulation",
         "tab_interp": "Interprétation",
         "tab_params": "Paramètres expliqués",
@@ -117,7 +117,7 @@ I18N = {
 
     "en": {
         "lang_name": "English",
-        "title": "Thermo-hydraulic simulator - Radial Darcy  © Rémi Lehu - GER SA"",
+        "title": "Thermo-hydraulic simulator - Radial Darcy  © Rémi Lehu - GER SA",
         "tab_sim": "Simulation",
         "tab_interp": "Interpretation",
         "tab_params": "Parameter guide",
@@ -208,7 +208,7 @@ I18N = {
 
     "it": {
         "lang_name": "Italiano",
-        "title": "Simulatore termo-idraulico - Darcy Radiale  © Rémi Lehu - GER SA"",
+        "title": "Simulatore termo-idraulico - Darcy Radiale  © Rémi Lehu - GER SA",
         "tab_sim": "Simulazione",
         "tab_interp": "Interpretazione",
         "tab_params": "Guida parametri",
