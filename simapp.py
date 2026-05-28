@@ -678,7 +678,7 @@ def fmt_2dec_or_sci(x):
 # Streamlit UI
 # ============================================================
 st.set_page_config(
-    page_title="Simulateur Darcy Radial", layout="wide",
+    page_title="Simulateur Darcy Radial",
     page_icon="logo.png",
     layout="wide"
 )
