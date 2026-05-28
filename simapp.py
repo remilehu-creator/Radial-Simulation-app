@@ -696,7 +696,7 @@ T = I18N[lang_key]
 st.title(T["title"])
 st.markdown(
     "<p style='font-size:16px; color:gray; font-style:italic;'>© Rémi Lehu - GER SA</p>",
-    unsafe_allow_html=True
+    unsafe_allow_html=True)
 tab_sim, tab_interp, tab_params = st.tabs([T["tab_sim"], T["tab_interp"], T["tab_params"]])
 
 palettes = ["turbo", "inferno", "plasma", "viridis", "magma",
