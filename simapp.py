@@ -26,7 +26,7 @@ SECONDS_PER_YEAR = 365.25 * SECONDS_PER_DAY
 I18N = {
     "fr": {
         "lang_name": "Français",
-        "title": "Simulateur thermo hydraulique - Darcy Radial  © Rémi Lehu - GER SA ",
+        "title": "Simulateur thermo hydraulique - Darcy Radial  ",
         "tab_sim": "Simulation",
         "tab_interp": "Interprétation",
         "tab_params": "Paramètres expliqués",
@@ -117,7 +117,7 @@ I18N = {
 
     "en": {
         "lang_name": "English",
-        "": "Thermo-hydraulic simulator - Radial Darcy  © Rémi Lehu - GER SA",
+        "": "Thermo-hydraulic simulator - Radial Darcy",
         "tab_sim": "Simulation",
         "tab_interp": "Interpretation",
         "tab_params": "Parameter guide",
@@ -208,7 +208,7 @@ I18N = {
 
     "it": {
         "lang_name": "Italiano",
-        "": "Simulatore termo-idraulico - Darcy Radiale  © Rémi Lehu - GER SA",
+        "": "Simulatore termo-idraulico - Darcy Radiale",
         "tab_sim": "Simulazione",
         "tab_interp": "Interpretazione",
         "tab_params": "Guida parametri",
@@ -694,9 +694,11 @@ lang_key = st.sidebar.selectbox(
 T = I18N[lang_key]
 
 st.title(T["title"])
+
 st.markdown(
     "<p style='font-size:16px; color:gray; font-style:italic;'>© Rémi Lehu - GER SA</p>",
     unsafe_allow_html=True)
+
 tab_sim, tab_interp, tab_params = st.tabs([T["tab_sim"], T["tab_interp"], T["tab_params"]])
 
 palettes = ["turbo", "inferno", "plasma", "viridis", "magma",
